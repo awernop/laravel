@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('description');
             $table->foreignId('user_id')->constrained();
-            /*$table->string('path_img')->nullable();*/
+            $table->string('path_img')->nullable();
             $table->enum('status', ['Новая', 'Одобрена', 'Отменена']);
             $table->timestamps();
         });

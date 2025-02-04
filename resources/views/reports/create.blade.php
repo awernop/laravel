@@ -17,11 +17,11 @@
                 <x-input-error :messages="$errors->get('description')" class="mt-2" />
             </div>
 
-            <!-- <div>
+            <div>
                 <x-input-label for="path_img" :value="__('Время')"/>
                 <input type='file' id="path_img" class="block mt-1" name="path_img" required/>
                 <x-input-error :messages="$errors->get('path_img')" class="mt-2" />
-            </div> -->
+            </div>
             <div>
                 <x-primary-button class="ms-3">
                     {{__('Создать')}}

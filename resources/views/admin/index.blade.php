@@ -11,9 +11,9 @@
             <p class="text-sm text-gray-500">{{\Carbon\Carbon::parse($report->created_at)->translatedFormat('j F Y')}}</p>
             <span class='text-xl font-semibold	'>{{$report->title}}</span>
             <p class='text-blue-500'>{{$report->description}}</p>
-            <!-- @isset($report->path_img)
+            @isset($report->path_img)
             <img src="/images/{{$report->path_img}}" alt="" class='rounded-lg mt-2'>
-            @endisset -->
+            @endisset
             @if($report->status=="Новая")
             <form id="form-update-{{$report->id}}" action="{{route('reports.update')}}" method="POST">
             <div>

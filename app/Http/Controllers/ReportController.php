@@ -25,16 +25,16 @@ class ReportController extends Controller
         $request->validate([
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
-            /*'path_img' => 'image|mimes:png,jpg,jpeg,gif|max:800',*/
+            'path_img' => 'image|mimes:png,jpg,jpeg,gif|max:800',
         ]);
 
-        /*$imageName = time() . '.' . $request['path_img']->extension();
-        $request['path_img']->move(public_path('images'), $imageName);*/
+        $imageName = time() . '.' . $request['path_img']->extension();
+        $request['path_img']->move(public_path('images'), $imageName);
 
         Report::create([
             'title' => $request->title,
             'description' => $request->description,
-            /*'path_img' => $imageName,*/
+            'path_img' => $imageName,
             "user_id" => Auth::user()->id,
             "status" => "Новая",
         ]);
